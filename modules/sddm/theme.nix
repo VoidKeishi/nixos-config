@@ -12,8 +12,9 @@ stdenvNoCC.mkDerivation rec {
   src = fetchFromGitHub {
     owner = "Keyitdev";
     repo = "sddm-astronaut-theme";
-    rev = "11c0bf6147bbea466ce2e2b0559e9a9abdbcc7c3";
-    hash = "sha256-gBSz+k/qgEaIWh1Txdgwlou/Lfrfv3ABzyxYwlrLjDk=";
+    rev = "bf4d01732084be29cedefe9815731700da865956";
+    hash = "sha256-JMCG7oviLqwaymfgxzBkpCiNi18BUzPGvd3AF9BYSeo=";
+    
   };
 
   # Avoid wrapping Qt binaries
