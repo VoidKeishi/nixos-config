@@ -10,5 +10,6 @@
     ./service.nix
     ./setting.nix
     ./user.nix
+    ./docker.nix
   ];
 }
