@@ -15,6 +15,7 @@
     rofi
     xdg-desktop-portal-hyprland
     xdg-desktop-portal
+    (pkgs.callPackage ./sddm/font.nix { sddmAstronautTheme = pkgs.callPackage ./sddm/theme.nix {}; })
   ];
 
   virtualisation.vmware.host.enable = true;
