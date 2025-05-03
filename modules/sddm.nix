@@ -1,52 +1,29 @@
-{
-  config,
-  lib,
-  pkgs,
-  inputs,
-  ...
-}:
+{ config, pkgs, ... }:
 let
-  # Create a custom variant of the sddm-astronaut theme
   custom-sddm-astronaut = pkgs.sddm-astronaut.override {
-    embeddedTheme = "japanese_aesthetic"; # Use the Japanese aesthetic subtheme
-    themeConfig = {
-      Background = "/home/keishi/Pictures/nix-snowflake.png";
-      Font = "Electroharmonix";
+    embeddedTheme = "japanese_aesthetic";
+    themeIni = {
+      General = {
+        background = "${pkgs.writeText "bg" ''/etc/sddm/nix-snowflake.png''}";
+        backgroundMode = "fill";
+        font = "Electroharmonix";
+      };
     };
   };
 in {
   environment.systemPackages = [
-    # Include the custom theme and required Qt packages
     custom-sddm-astronaut
     pkgs.kdePackages.qtsvg
     pkgs.kdePackages.qtmultimedia
     pkgs.kdePackages.qtvirtualkeyboard
-    
-    # cosmetic
-    pkgs.kde-rounded-corners
-    inputs.kwin-effects-forceblur.packages.${pkgs.system}.default
   ];
 
-  services = {
-    xserver.enable = false;
-    desktopManager.plasma6.enable = true;
-
-    displayManager.sddm = {
-      enable = true;
-      wayland.enable = true;
-      theme = "sddm-astronaut-theme";
-      
-      # Add the theme package to SDDM's package list
-      extraPackages = [
-        custom-sddm-astronaut
-      ];
-      
-      # Ensure SDDM uses the correct theme
-      settings = {
-        Theme = {
-          Current = "sddm-astronaut-theme";
-        };
-      };
-    };
+  services.desktopManager.plasma6.enable = true;
+  services.displayManager.sddm = {
+    enable = true;
+    wayland.enable = true;
+    theme = "astronaut";
+    extraPackages = [ custom-sddm-astronaut ];
+    settings = { Theme.Current = "astronaut"; };
   };
 }
