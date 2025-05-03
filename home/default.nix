@@ -5,8 +5,7 @@
     ./shell.nix
     ./git.nix
     ./starship.nix
-    ./desktop/kitty.nix # Example import for a desktop app
-    # Add imports for other desktop modules like hyprland.nix here
+    ./kitty.nix
   ];
 
   home = {
