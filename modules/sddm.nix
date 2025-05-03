@@ -10,8 +10,8 @@ let
   custom-sddm-astronaut = pkgs.sddm-astronaut.override {
     embeddedTheme = "japanese_aesthetic"; # Use the Japanese aesthetic subtheme
     themeConfig = {
-      Font = "Electroharmonix"; # Explicitly set the font
-      # You can add other theme config overrides here if needed
+      Background = "/home/keishi/Pictures/nix-snowflake.png";
+      Font = "Electroharmonix";
     };
   };
 in {

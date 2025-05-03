@@ -1,6 +1,6 @@
 { config, pkgs, ... }: {
   imports = [
-    ./sddm/sddm.nix
+    ./sddm.nix
     ./bootloader.nix
     ./locales.nix
     ./network.nix
