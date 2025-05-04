@@ -17,8 +17,7 @@
     hyprpanel
     rofi
     xdg-desktop-portal
-    python313
-    python313Packages.pip
+    conda
   ];
 
   virtualisation.vmware.host.enable = true;
