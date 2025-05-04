@@ -19,6 +19,7 @@
     xdg-desktop-portal
     micromamba
     nodejs_22
+    appimage-run
   ];
 
   virtualisation.vmware.host.enable = true;
