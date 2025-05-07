@@ -23,6 +23,6 @@
     gcc
     cmake
   ];
-
+  programs.nix-ld.enable = true;
   virtualisation.vmware.host.enable = true;
 }
