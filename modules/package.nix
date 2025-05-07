@@ -20,6 +20,8 @@
     micromamba
     nodejs_22
     appimage-run
+    gcc
+    cmake
   ];
 
   virtualisation.vmware.host.enable = true;
