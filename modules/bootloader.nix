@@ -11,4 +11,5 @@
       useOSProber = true;
     };
   };
+  boot.kernelParams = [ "acpi_backlight=vendor" ];
 }

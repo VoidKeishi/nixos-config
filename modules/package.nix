@@ -17,11 +17,10 @@
     hyprpanel
     rofi
     xdg-desktop-portal
-    micromamba
     nodejs_22
     appimage-run
-    gcc
     cmake
+    gcc
   ];
   programs.nix-ld.enable = true;
   virtualisation.vmware.host.enable = true;
