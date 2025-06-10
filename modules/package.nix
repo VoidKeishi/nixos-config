@@ -21,6 +21,10 @@
     appimage-run
     cmake
     gcc
+    windsurf
+    sticky
+    foliate
+    hyprland
   ];
   programs.nix-ld.enable = true;
   virtualisation.vmware.host.enable = true;
