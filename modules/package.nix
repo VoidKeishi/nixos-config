@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ inputs, pkgs, ... }:
 {
   programs.zsh.enable = true;
   programs.hyprland = {
@@ -25,7 +25,7 @@
     sticky
     foliate
     hyprland
+    vscode
   ];
   programs.nix-ld.enable = true;
-  virtualisation.vmware.host.enable = true;
 }

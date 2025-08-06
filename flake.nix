@@ -3,7 +3,7 @@
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs?ref=nixos-unstable";
-    
+
     hyprpanel.url = "github:Jas-SinghFSU/HyprPanel";
 
     home-manager = {
@@ -24,6 +24,7 @@
         inherit inputs;
       };
       modules = [
+        {nixpkgs.overlays = [inputs.hyprpanel.overlay];}
         ./configuration.nix
       ];
     };
